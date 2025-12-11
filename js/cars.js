@@ -285,3 +285,4 @@ function selectCar(carId) {
     localStorage.setItem('selectedCar', carId);
     window.location.href = 'tires.html';
 }
+

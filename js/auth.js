@@ -113,3 +113,4 @@ function checkAuth() {
         if (userLinks) userLinks.style.display = 'none';
     }
 }
+

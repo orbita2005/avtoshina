@@ -55,3 +55,4 @@ function loadOrders() {
 function isLoggedIn() {
     return !!localStorage.getItem('currentUser');
 }
+

@@ -88,3 +88,4 @@ function addToCart(tireId, carId) {
 function isLoggedIn() {
     return !!localStorage.getItem('currentUser');
 }
+

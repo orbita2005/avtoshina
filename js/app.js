@@ -3,7 +3,38 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCartCount();
     checkAuth();
     loadPopularCars();
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const navMenu = document.getElementById('nav-menu');
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        
+        if (navMenu && menuToggle && 
+            !navMenu.contains(event.target) && 
+            !menuToggle.contains(event.target) &&
+            navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+        }
+    });
+    
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const navMenu = document.getElementById('nav-menu');
+            if (navMenu && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+            }
+        });
+    });
 });
+
+function toggleMobileMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    if (navMenu) {
+        navMenu.classList.toggle('active');
+    }
+}
 
 function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -57,3 +88,4 @@ function selectCar(carId) {
 function getCarsData() {
     return JSON.parse(localStorage.getItem('carsData')) || [];
 }
+

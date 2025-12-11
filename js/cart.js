@@ -103,3 +103,4 @@ function checkout() {
 function isLoggedIn() {
     return !!localStorage.getItem('currentUser');
 }
+
