@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirish - AutoShina</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🚗 AutoShina</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Bosh Sahifa</a></li>
+                <li><a href="register.html">Ro'yxatdan o'tish</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-card">
+                <h2>Kirish</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Parol</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Kirish</button>
+                </form>
+                <p class="auth-link">Akkauntingiz yo'qmi? <a href="register.html">Ro'yxatdan o'tish</a></p>
+                <div id="login-message" class="message"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

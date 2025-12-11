@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biz Haqimizda - AutoShina</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🚗 AutoShina</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Bosh Sahifa</a></li>
+                <li><a href="cars.html">Mashinalar</a></li>
+                <li><a href="tires.html">Shinalar</a></li>
+                <li><a href="about.html" class="active">Biz Haqimizda</a></li>
+                <li><a href="contact.html">Aloqa</a></li>
+                <li><a href="cart.html" class="cart-link">Savat (<span id="cart-count">0</span>)</a></li>
+                <li id="auth-links">
+                    <a href="login.html" class="btn-login">Kirish</a>
+                </li>
+                <li id="user-links" style="display: none;">
+                    <a href="profile.html" id="username-display"></a>
+                    <a href="#" onclick="logout()" class="btn-logout">Chiqish</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Biz Haqimizda</h1>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2>AutoShina - Avtomobil Shinalari Do'koni</h2>
+                <p>AutoShina - bu avtomobil shinalari bo'yicha O'zbekistondagi eng yirik va ishonchli do'konlardan biri. Biz 2010 yildan buyon mijozlarimizga sifatli shinalar va xizmatlar ko'rsatib kelmoqdamiz.</p>
+                
+                <h3>Bizning Maqsadimiz</h3>
+                <p>Har bir avtomobil egasiga o'z mashinasiga mos, sifatli va xavfsiz shinalarni taqdim etish. Biz mijozlarimizning xavfsizligi va qoniqishini eng yuqori darajada qo'llab-quvvatlaymiz.</p>
+
+                <h3>Nima Uchun Bizni Tanlash</h3>
+                <ul class="about-list">
+                    <li>✅ 30+ turdagi mashinalar uchun shinalar</li>
+                    <li>✅ Eng yaxshi narxlar</li>
+                    <li>✅ Tez va ishonchli yetkazib berish</li>
+                    <li>✅ Professional maslahat</li>
+                    <li>✅ Kafolatli mahsulotlar</li>
+                    <li>✅ 24/7 mijozlar xizmati</li>
+                </ul>
+
+                <h3>Bizning Jamoamiz</h3>
+                <p>Bizning jamoamiz tajribali mutaxassislardan iborat bo'lib, sizga eng yaxshi maslahat va xizmatlarni taqdim etishga tayyor.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoShina</h3>
+                    <p>Avtomobil shinalari bo'yicha eng yirik do'kon</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Havolalar</h4>
+                    <ul>
+                        <li><a href="index.html">Bosh Sahifa</a></li>
+                        <li><a href="cars.html">Mashinalar</a></li>
+                        <li><a href="about.html">Biz Haqimizda</a></li>
+                        <li><a href="contact.html">Aloqa</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

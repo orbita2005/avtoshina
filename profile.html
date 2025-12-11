@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - AutoShina</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🚗 AutoShina</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Bosh Sahifa</a></li>
+                <li><a href="cars.html">Mashinalar</a></li>
+                <li><a href="tires.html">Shinalar</a></li>
+                <li><a href="about.html">Biz Haqimizda</a></li>
+                <li><a href="contact.html">Aloqa</a></li>
+                <li><a href="cart.html" class="cart-link">Savat (<span id="cart-count">0</span>)</a></li>
+                <li id="auth-links" style="display: none;">
+                    <a href="login.html" class="btn-login">Kirish</a>
+                </li>
+                <li id="user-links">
+                    <a href="profile.html" id="username-display" class="active"></a>
+                    <a href="#" onclick="logout()" class="btn-logout">Chiqish</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Mening Profilim</h1>
+        </div>
+    </section>
+
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-card">
+                <h2>Shaxsiy Ma'lumotlar</h2>
+                <div id="profile-info">
+                    <!-- Profile info will be loaded here -->
+                </div>
+            </div>
+            <div class="profile-card">
+                <h2>Buyurtmalarim</h2>
+                <div id="orders-list">
+                    <p>Hozircha buyurtmalar yo'q</p>
+                    <a href="orders.html" class="btn-primary">Barcha Buyurtmalarni Ko'rish</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoShina</h3>
+                    <p>Avtomobil shinalari bo'yicha eng yirik do'kon</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Havolalar</h4>
+                    <ul>
+                        <li><a href="index.html">Bosh Sahifa</a></li>
+                        <li><a href="cars.html">Mashinalar</a></li>
+                        <li><a href="about.html">Biz Haqimizda</a></li>
+                        <li><a href="contact.html">Aloqa</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        if (!isLoggedIn()) {
+            window.location.href = 'login.html';
+        } else {
+            const user = JSON.parse(localStorage.getItem('currentUser'));
+            document.getElementById('profile-info').innerHTML = `
+                <div class="profile-item">
+                    <strong>Ism:</strong> ${user.name}
+                </div>
+                <div class="profile-item">
+                    <strong>Email:</strong> ${user.email}
+                </div>
+                <div class="profile-item">
+                    <strong>Telefon:</strong> ${user.phone}
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
